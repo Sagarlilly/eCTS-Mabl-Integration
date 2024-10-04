@@ -1,1 +1,31 @@
+name: eCTS Mabl Tests
+ 
+on:
+  push:
+    branches:
+      - main  # Adjust the branch name as needed
+      - QA
+  workflow_dispatch:
+ 
+jobs:
+  test:
+    name: mabl Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+ 
+      - name: Run Regression Tests
+        id: mabl-test-deployment
+        uses: mablhq/github-run-tests-action@v1
+        env:
+          # Use a "CI/CD Integration" type of mabl API key
+          MABL_API_KEY: ${{ secrets.MABL_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.MABL_GITHUB_TOKEN }}
+        with:
+          application-id: PZmOSX1r3h4MOsa3Cdxvew-a
+          environment-id: TNwPMxcT0KpOS5RQtXDDxA-e
+          plan-labels: TEH-eCTS-Regression
+          browser-types: |
+                          chrome
+                          
 
