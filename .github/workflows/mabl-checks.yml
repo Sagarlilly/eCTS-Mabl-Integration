@@ -1,3 +1,12 @@
+name: eCTS Mabl Tests
+ 
+on:
+  push:
+    branches:
+      - main  # Adjust the branch name as needed
+      - QA
+  workflow_dispatch:
+ 
 jobs:
   test:
     name: mabl Test
@@ -19,4 +28,3 @@ jobs:
           mabl-branch: master
           browser-types: |
                           chrome
-                          
