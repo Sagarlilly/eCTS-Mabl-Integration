@@ -19,11 +19,11 @@ jobs:
         uses: mablhq/github-run-tests-action@v1
         env:
           # Use a "CI/CD Integration" type of mabl API key
-          MABL_API_KEY: ${{ secrets.MABL_API_KEY }}
+          MABL_API_KEY: N5GY5A4R9gkkOLLjs2VeYw
           GITHUB_TOKEN: ${{ secrets.MABL_GITHUB_TOKEN }}
         with:
-          application-id: ${{ secrets.APPLICATION_ID }}
-          environment-id: ${{ secrets.ENVIRONMENT_ID }}
+          application-id: PZmOSX1r3h4MOsa3Cdxvew-a
+          environment-id: TNwPMxcT0KpOS5RQtXDDxA-e
           plan-labels: TEH-eCTS-Regression
           mabl-branch: eCTS
           browser-types: |
