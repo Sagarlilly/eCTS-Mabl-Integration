@@ -22,8 +22,8 @@ jobs:
           MABL_API_KEY: ${{ secrets.MABL_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.MABL_GITHUB_TOKEN }}
         with:
-          application-id: PZmOSX1r3h4MOsa3Cdxvew-a
-          environment-id: TNwPMxcT0KpOS5RQtXDDxA-e
+          application-id: ${{ secrets.Application_ID }}
+          environment-id: ${{ secrets.ENVIRONMENT_ID }}
           plan-labels: TEH-eCTS-Regression
           browser-types: |
                           chrome
