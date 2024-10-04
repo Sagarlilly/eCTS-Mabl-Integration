@@ -21,7 +21,7 @@ jobs:
           application-id: ${{ secrets.APPLICATION_ID }}
           environment-id: ${{ secrets.ENVIRONMENT_ID }}
           plan-labels: TEH-eCTS-Regression
-          mabl-branch: eCTS
+          mabl-branch: master
           browser-types: |
                           chrome
                           
