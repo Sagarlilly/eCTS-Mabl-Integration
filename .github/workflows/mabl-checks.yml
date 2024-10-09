@@ -7,6 +7,9 @@ on:
       - QA
   workflow_dispatch:
   schedule:
+    - cron: '0 12 * * *'  # Runs at 12 PM UTC every day
+    - cron: '0 14 * * *'  # Runs at 2 PM UTC every day
+    - cron: '0 16 * * *'  # Runs at 4 PM UTC every day
     - cron: '0 18 * * *'  # Runs at 6 PM UTC every day
 
 jobs:
