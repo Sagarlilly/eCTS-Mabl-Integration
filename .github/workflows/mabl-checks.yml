@@ -1,19 +1,21 @@
 name: eCTS Mabl Tests
- 
+
 on:
   push:
     branches:
       - main  # Adjust the branch name as needed
       - QA
   workflow_dispatch:
- 
+  schedule:
+    - cron: '50 15 * * *'  # Runs at 3:50 PM UTC every day
+
 jobs:
   test:
     name: mabl Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
- 
+
       - name: Run Regression Tests
         id: mabl-test-deployment
         uses: mablhq/github-run-tests-action@v1
@@ -27,4 +29,4 @@ jobs:
           plan-labels: TEH-eCTS-Regression
           mabl-branch: master
           browser-types: |
-                          chrome
+            chrome
